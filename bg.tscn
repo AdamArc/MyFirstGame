@@ -1,0 +1,60 @@
+[gd_scene load_steps=4 format=3 uid="uid://dl3ftsfo1fyh4"]
+
+[ext_resource type="Script" path="res://BG.gd" id="1_53pto"]
+[ext_resource type="Texture2D" uid="uid://dpohrt5746oji" path="res://environment/Background/back.png" id="2_wjiql"]
+[ext_resource type="Texture2D" uid="uid://bvmdqjxcgvvbi" path="res://environment/Background/middle.png" id="3_xpcbo"]
+
+[node name="BG" type="ParallaxBackground"]
+script = ExtResource("1_53pto")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+position = Vector2(4.65661e-10, -1.19209e-07)
+rotation = -0.00461384
+motion_mirroring = Vector2(1155, 0)
+
+[node name="Back" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(576.011, 324.161)
+rotation = 0.00461384
+scale = Vector2(3.00781, 2.67917)
+texture = ExtResource("2_wjiql")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+position = Vector2(-31, 8)
+rotation = -0.00461384
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(1198, 0)
+
+[node name="Middle" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(84.8583, 464.397)
+rotation = 0.00461384
+texture = ExtResource("3_xpcbo")
+
+[node name="Middle2" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(260.856, 465.209)
+rotation = 0.00461384
+texture = ExtResource("3_xpcbo")
+
+[node name="Middle3" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(436.85, 467.021)
+rotation = 0.00461384
+texture = ExtResource("3_xpcbo")
+
+[node name="Middle4" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(612.848, 467.833)
+rotation = 0.00461384
+texture = ExtResource("3_xpcbo")
+
+[node name="Middle5" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(786.851, 467.635)
+rotation = 0.00461384
+texture = ExtResource("3_xpcbo")
+
+[node name="Middle6" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(962.849, 468.447)
+rotation = 0.00461384
+texture = ExtResource("3_xpcbo")
+
+[node name="Middle7" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(1138.84, 470.259)
+rotation = 0.00461384
+texture = ExtResource("3_xpcbo")

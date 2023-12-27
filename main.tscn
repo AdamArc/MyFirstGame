@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=3 uid="uid://cn1cejppi3qqs"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_mtvir"]
+[ext_resource type="Texture2D" uid="uid://vvvmwah2vunw" path="res://spritesheets/eagle-attack.png" id="2_6p0b3"]
+[ext_resource type="PackedScene" uid="uid://dl3ftsfo1fyh4" path="res://bg.tscn" id="3_px3sa"]
+[ext_resource type="Script" path="res://bg.gd" id="4_eharn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j0l21"]
+atlas = ExtResource("2_6p0b3")
+region = Rect2(0, 0, 40, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cef23"]
+atlas = ExtResource("2_6p0b3")
+region = Rect2(40, 0, 40, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8344"]
+atlas = ExtResource("2_6p0b3")
+region = Rect2(80, 0, 40, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_43pr7"]
+atlas = ExtResource("2_6p0b3")
+region = Rect2(120, 0, 40, 41)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l2nwx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j0l21")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cef23")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w8344")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_43pr7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_mtvir")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(526, 317.875)
+scale = Vector2(5.45, 4.15244)
+sprite_frames = SubResource("SpriteFrames_l2nwx")
+frame_progress = 0.286418
+
+[node name="Play" type="Button" parent="."]
+offset_left = 409.0
+offset_top = 126.0
+offset_right = 695.0
+offset_bottom = 254.0
+text = "Play"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 411.0
+offset_top = 366.0
+offset_right = 697.0
+offset_bottom = 494.0
+text = "Quit"
+
+[node name="BG" parent="." instance=ExtResource("3_px3sa")]
+script = ExtResource("4_eharn")
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
